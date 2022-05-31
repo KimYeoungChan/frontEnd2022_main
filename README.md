@@ -34,12 +34,12 @@
 1. git 설치
 2. 설치 완료 후 git bash 열기
 3. git bash에서 환경설정 하기
-3-1. git config --global user.name "sangjin Park"
-3-2. git config --global user.email "sahatk@naver.com"
+3-1. git config --global user.name "KimYeoungChan"
+3-2. git config --global user.email "beethu@naver.com"
 4. git config --list
 
 // git 불러오기
-5. git clone https://github.com/sahatk/front_220220_main.git
+5. git clone https://github.com/KimYeoungChan/front_220220_main.git
 
 -----------------------------------------------------------------------------------------------------------------------------
 github에 처음 코드 업로드하기
@@ -57,7 +57,7 @@ git status
 git commit -m "first commit"
 
 5. Github repository랑 내 로컬 프로젝트랑 연결
-git remote add origin https://github.com/sahatk/front_220220_main.git
+git remote add origin https://github.com/KimYeoungChan/front_220220_main.git
 
 6. 잘 연결됬는데 확인(선택사항)
 git remote -v
