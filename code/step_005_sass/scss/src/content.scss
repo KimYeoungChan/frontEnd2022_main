@@ -4,6 +4,7 @@
 @import "../common/mixin";
 // 한줄주석은 변환 X
 
+
 // body {
 //     width: $full;
 //     height: $full;
@@ -32,9 +33,9 @@ h1 {
     // background-repeat : no-repeat;
     // background-position: 50% 50%;
     // background-size: contain;
-
+    $url : '../img/common/';
     background: {
-        image: url('../img/common/logo.png');
+        image: url($url + 'logo1.png');
         repeat : no-repeat;
         position: 50% 50%;
         size: contain;
@@ -52,7 +53,84 @@ h1 {
     // 22.06.04 수정끝
 } //h1 
 
+.news li .img {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
 
-// scss로 작업하는것은 css변환 가능
-// css로 작업한것은 scss변환 X
-// css로 수정을했다면 이후작업은 CSS에서 해야한다. 
+$url : '../img/newsData/';
+$news :('one.jpg', 'two.png', 'three.png', 'a.png', 'b.png'); // nth(변수명, 순번)
+
+// .new li:nth-child(1) .img { background-image: url($url + nth($news,1)   );}
+// .new li:nth-child(2) .img { background-image: url($url + nth($news,2)   );}
+// .new li:nth-child(3) .img { background-image: url($url + nth($news,3)   );}
+
+@for $i from 1 through length($news) {
+    .new li:nth-child(#{$i}) .img {
+        background-image: url($url + nth($news,$i) );
+    }
+}
+// 위 태그를 1~3번까지 반복을 해라
+// $i는 가변성 때문에 쓰는것이다. 인터폴레이션 기법
+// #{}가 하나의 새팅이다.!!
+
+$co : 'coffee';
+$coffee : ('americano', 'cafelatte', 'mocagold', 'esspresso');
+@mixin coffee($var,$name) {
+    background-image: url($url + nth($var, $name)+ '.png');
+}
+
+// .coffee_americano {background-image: url($url + nth($coffee, 1)+ '.png');}
+// .coffee_cafelatte {background-image: url($url + nth($coffee, 2)+ '.png');}
+// .coffee_mocagold {background-image: url($url + nth($coffee, 3)+ '.png');}
+// .coffee_esspresso {background-image: url($url + nth($coffee, 3)+ '.png');}
+@for $i from 1 through length($coffee) {
+    .#{$co}_#{nth($coffee, $i)} { @include coffee($coffee,$i); }
+}
+// 이터폴레이션 기법 / mixin, include 다 쓴거임
+
+/* ---------------------------------------*/
+/*
+    #contentBox {width: 100%; height: 400px; margin: auto;}
+    #contentBox h2 {position:absolute; width: 0; height:0; overflow: hidden;}
+    #contentBox ul {
+        width:100%; height: 300px; padding-top: 10px;
+        margin-bottom: 10px; border-bottom: 1px solid #333;
+    }
+    #contentBox ul li {
+        float: left; width:30px; height:40px;
+        margin:20px; padding:10px; border:1px solid #777;
+    }
+    #contentBox ul li a {
+        display: block; width: 100%; height: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-image: url(../img/news/a.png);}
+*/
+
+#contentBox {width: 100%; height: 400px; margin: auto;
+  & h2 {position:absolute; width: 0; height:0; overflow: hidden;}
+  & ul {
+    width:100%; height: 300px; padding-top: 10px;
+    margin-bottom: 10px; border-bottom: 1px solid #333;
+    } // ul
+    & li {
+        float: left; width:30px; height:40px;
+        margin:20px; padding:10px; border:1px solid #777;
+        } // li
+        & li a {
+            display: block; width: 100%; height: 100%;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+            background-image: url(../img/news/a.png);}
+        & li a {
+            &:hover { color :#fff; }
+            &:focus { color :#af0; }
+            &:visited { color :#aaf; }
+        }
+    } // #contentBox 
+    // 네스팅 기법
+    
