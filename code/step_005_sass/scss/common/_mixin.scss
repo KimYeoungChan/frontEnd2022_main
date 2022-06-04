@@ -1,0 +1,8 @@
+// minxin.scss
+@import "./variable";
+
+%full {width:$full; height:$full;}
+
+@mixin full(){
+    width:$full; height:$full;
+}
