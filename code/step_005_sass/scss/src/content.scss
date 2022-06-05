@@ -110,27 +110,31 @@ $coffee : ('americano', 'cafelatte', 'mocagold', 'esspresso');
         background-image: url(../img/news/a.png);}
 */
 
-#contentBox {width: 100%; height: 400px; margin: auto;
-  & h2 {position:absolute; width: 0; height:0; overflow: hidden;}
-  & ul {
-    width:100%; height: 300px; padding-top: 10px;
-    margin-bottom: 10px; border-bottom: 1px solid #333;
+#contentBox { width: 100%; height: 400px; margin: auto;
+
+    & h2 { position: absolute; width: 0; height: 0;  overflow: hidden;}
+    & ul { width: 100%; height: 300px; 
+      padding-top: 10px; margin-bottom: 10px; border-bottom: 1px solid #333;
     } // ul
+  
     & li {
-        float: left; width:30px; height:40px;
-        margin:20px; padding:10px; border:1px solid #777;
-        } // li
-        & li a {
-            display: block; width: 100%; height: 100%;
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-            background-size: cover;
-            background-image: url(../img/news/a.png);}
-        & li a {
-            &:hover { color :#fff; }
-            &:focus { color :#af0; }
-            &:visited { color :#aaf; }
-        }
-    } // #contentBox 
+      float:left; width:30px; height: 40px; 
+      margin:20px; padding:10px; border:1px solid #777;
+    
+    }// li
+    & li a{ 
+      display: block; width: 100%; height: 100%; 
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-image: url('../img/news/a.png'); }
+  
+    & li a {
+      &:hover { color:#fff; }
+      &:focus { color:#af0; }
+      &:visited {color:#aaf;}
+    }
+  
+  } // #contentBox
     // 네스팅 기법
     
