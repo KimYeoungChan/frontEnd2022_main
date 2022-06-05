@@ -154,7 +154,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  background-image: url(../img/news/a.png);
+  background-image: url("../img/news/a.png");
 }
 #contentBox li a:hover {
   color: #fff;
@@ -165,4 +165,9 @@ h1 {
 #contentBox li a:visited {
   color: #aaf;
 }
+
+#wrap {
+  background-color: #a7d;
+}
+
 /*# sourceMappingURL=content.css.map */

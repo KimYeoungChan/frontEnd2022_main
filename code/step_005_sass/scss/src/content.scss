@@ -1,7 +1,9 @@
 @charset "UTF-8";
 /* content.scss */
 // @import "../common/variable";
-@import "../common/mixin";
+@use  '../common/variable' as *;
+@import  '../common/mixin'; 
+// mixin은 import로 하는것이 에러가 안남.
 // 한줄주석은 변환 X
 
 
@@ -138,3 +140,7 @@ $coffee : ('americano', 'cafelatte', 'mocagold', 'esspresso');
   } // #contentBox
     // 네스팅 기법
     
+
+    #wrap {
+        background-color: #a7d;
+    }
