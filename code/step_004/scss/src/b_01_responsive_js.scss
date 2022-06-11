@@ -1,0 +1,10 @@
+// _b_01_resposive__js.scss
+/* _b_01_resposive__js.css*/
+
+@use '../common/mixin' as *;
+@use '../temp/headBox';
+
+#wrap {
+    width:100%; height: auto; min-height:31.25rem;
+    background-color: #ccc;
+}
