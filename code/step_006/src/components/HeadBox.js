@@ -1,7 +1,7 @@
 // HeadBox.js
 
 import PageTitle from './PageTitle';
-import Navigation from './Navigation';
+import Navigation from './template/Navigation';
 import './HeadBox.css';
 
 function HeadBox(){

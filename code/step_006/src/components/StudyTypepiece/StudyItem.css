@@ -1,0 +1,97 @@
+/* StudyItem.css */
+
+.StudyItem a {
+    display: block; width: 100%; height: 100%;
+    background-color: #fff;
+}
+
+.skill_tip {
+    position: relative;
+    display: flex; justify-content: space-between;
+    align-items: flex-start;
+    width: 100%; height: 60%;
+    box-sizing: border-box; padding: 0.5rem; border-radius: 0.7rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: #999;
+    /* background: no-repeat 50% 50% url() / cover; */
+}
+
+.software_icon {
+    width: 2rem; height: 2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    border-radius: 5rem;
+    background-color: #fff;
+}
+
+.label {
+    width: auto; height: auto;
+    padding:0.2rem 0.4rem; border-radius: 5rem;
+    font-size: 0.875rem; font-weight:500; color:#fff;
+    background-color: #d5d;
+}
+
+
+.price {
+    position:absolute;
+    right: 0.5rem; bottom:0.5rem;
+    text-align: right;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color:#fff;
+}
+
+.sale_on .origin {
+    position: relative;
+    float: right; padding:0 0.5rem;
+    margin-top: -1.5rem;
+    font-size: 1rem;
+}
+
+.price .sale {display: none;}
+
+.sale_on .origin::after {
+    content: ""; position:absolute;
+    top: 50%; left: 0;
+    width: 100%; height: 1px;
+    background-color: #fff;
+}
+
+.sale_on .sale { display: inline;}
+
+.StudyItem dl {
+    width:100%; height: 40%;
+    box-sizing: border-box; padding-top: 0.7rem;
+    background-color: #fda;
+}
+
+.StudyItem dt {
+    width: 100%; height:50%; margin-bottom:1rem;
+    font-size:1.2rem; font-weight: 700;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+
+.StudyItem dd {
+    width: 100%; height: auto;
+    box-sizing: border-box;
+    padding:0.5rem 0;
+    color: #575757;
+    font-weight: 700;
+    overflow-y: visible;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+
+.StudyItem .option {
+    margin-right:1rem;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #999;
+    border-radius: 0.2rem;
+    color:#333;
+    background-color: #dfdfdf;
+}
