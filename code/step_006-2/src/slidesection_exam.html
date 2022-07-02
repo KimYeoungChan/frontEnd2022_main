@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드광고 영역 예시</title>
+</head>
+<body>
+    <!-- 슬라이드 광고 영역 html 예시 -->
+
+<section id="viewBox">
+    <!-- <h2>광고</h2> -->
+    <div class="btns">
+        <button type="button">next</button>
+        <button type="button">prev</button>
+    </div>
+    <div class="indicator">
+        <ul>
+            <li><a href="#광고명_1"><span class="blind">광고내용01</span></a></li>
+            <li><a href="#광고명_2"><span class="blind">광고내용02</span></a></li>
+            <li><a href="#광고명_3"><span class="blind">광고내용03</span></a></li>
+            <li><a href="#광고명_4"><span class="blind">광고내용04</span></a></li>
+            <li><a href="#광고명_5"><span class="blind">광고내용05</span></a></li>
+        </ul>
+    </div>
+
+    <div class="view_content" style="width:600%">
+        <!-- ul>li*6>div>h3+p+.link>a>span{요약내용}^{자세히보기} -->
+        <ul>
+            <li style="width:calc(100% / 6);">
+                <div>
+                    <h3></h3>
+                    <p></p>
+                    <div class="link"><a href=""><span>요약내용</span></a>자세히보기</div>
+                </div>
+            </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        </ul>
+        <p>
+            <span class="nowCount">20</span>
+            <span class="spash">/</span>
+            <span class="nowCount">1</span>
+        </p>
+    </div>    
+</section>
+</body>
+</html>
