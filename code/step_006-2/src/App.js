@@ -7,9 +7,15 @@ import './App.css';
     1. useState의 기능을 이용하여 값이 변할 때, 1차로 끝나는 것이 아니라 2~3차로 같이 변화를 거칠 때 적용하기 위한
     2. 하나의 값이 변화를 일으킬 때, 해당 변화를 감지하여 처리하는 경우
     3. 최초의 실행을 목적으로 사용하는데, 비동기처리로 수행할 때
-
+    
     fetch(url).then(data=>return data.json()).then(data=>{기능 수행});
 */
+
+    // useEffect( ()=>{} ); -> 무조건 렌더링이 될때마다 매번 수행
+        // useEffect( ()=>{},[] ); -> 최초 한번만 수행
+        // useEffect( ()=>{},[value] ); -> 최초 한번만 수행, value에 해당해는 값이 변할때마다 수행
+        // useEffect( ()=>{/* */ return ()=>{ /* 수행취소 */} }, [value]); 
+        // -> 최초 한번 수행, value에 해당하는 값이 변할때마다 수행, return이 존재하면 기본 수행되는 기능을 정리
 
 function App(){
     // const imageList = ['001-turtle.png', '002-livestock.png', '003-lion.png', '004-fox.png','005-cow.png','006-bee.png'];
@@ -73,11 +79,7 @@ function App(){
     const handlerview = ()=> setView('text');
     const handlerBlind = ()=> setView('password');
 
-    // useEffect( ()=>{} ); -> 무조건 렌더링이 될때마다 매번 수행
-    // useEffect( ()=>{},[] ); -> 최초 한번만 수행
-    // useEffect( ()=>{},[value] ); -> 최초 한번만 수행, value에 해당해는 값이 변할때마다 수행
-    // useEffect( ()=>{/* */ return ()=>{ /* 수행취소 */} }, [value]); 
-    // -> 최초 한번 수행, value에 해당하는 값이 변할때마다 수행, return이 존재하면 기본 수행되는 기능을 정리
+    
 
     // useEffect( () => console.log('user: ', user),[user]);
     // useEffect( () => console.log('pw: ', pw),[pw]);

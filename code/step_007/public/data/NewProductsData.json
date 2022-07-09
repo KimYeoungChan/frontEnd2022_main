@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "img":"image1.jpg",
+        "alt":"설명",
+        "link":"#",
+        "title":"title1",
+        "content":"lorem text1"
+    },
+    {
+        "id":2,
+        "img":"image2.jpg",
+        "alt":"설명",
+        "link":"#",
+        "title":"title2",
+        "content":"lorem text2"
+    },
+    {
+        "id":3,
+        "img":"image3.jpg",
+        "alt":"설명",
+        "link":"#",
+        "title":"title3",
+        "content":"lorem text3"
+    }
+]
