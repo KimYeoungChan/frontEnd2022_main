@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import UseRef from '../../Component/UseRef';
+// import UseRef from '../../Component/UseRef';
 // import{ v4 as uuid4 } from 'uuid';
 // import uuid from 'react-uuid';
 import './ViewBox.scss'
@@ -19,31 +19,34 @@ function ViewBox() {
   ];
  
   const moveSlide = useRef();
+  
+  const handlerNextClick = (e) => { 
+    e && e.preventDefault();
+    count >= total ? setCount(0) : setCount(count + 1);
+  }
+  const handlerPrevClick = (e) => { 
+    e.preventDefault();
+    count <= 0 ? setCount(total) : setCount(count - 1);
+  } 
 
-  const startSlide = () => moveSlide.current = setInterval(() => { handlerNextClick() },timed);
-  const stopSlide = () => clearInterval(moveSlide.current) 
+  const startSlide = () => moveSlide.current = setInterval(() => {
+    handlerNextClick(); 
+    stopSlide();
+  },timed);
+  function stopSlide(){
+    clearInterval(moveSlide.current);
+  }   
   
   useEffect( ()=> {
     startSlide();
-    return stopSlide();
-  })
+    return () => stopSlide();
+  },[count])
 
   // const listData = [1,2,3,4,5];
   // const listColor = ['#adf', '#f4a', 'af7', '#ccf', '#faa'];
   // const setUUID = [uuid(), uuid(), uuid(), uuid()];
-
-  useEffect( () => {
-    console.log( count );
-  },[count]);
-
-  const handlerNextClick = (e) => { 
-    e && e.preventDefault();
-    count >= total ? setCount(0) : setCount(count + 1);
-  } //count가 4보다 같거나 작으면 setCount값을 0으로 한다. 아니면 count +1 값으로 한다.
-  const handlerPrevClick = (e) => { 
-    e.preventDefault();
-    count <= 0 ? setCount(total) : setCount(count - 1);
-  } //count가 0보다 작거나 같으면 setCount값을 total으로 한다. 아니면 count -1 값으로 한다.
+  
+  
 
   return (
     <section id="viewBox" onMouseEnter={stopSlide} onMouseLeave={startSlide}>
@@ -60,7 +63,7 @@ function ViewBox() {
           <ul className='blind_area'>
             {
             listData.map((data,index)=> {
-              return ( <li key={data.num[index]} className={count === index ? 'action' : null}>
+              return ( <li key={data.num} className={count === index ? 'action' : null}>
                   <a href="#" onClick={(e)=> {e.preventDefault(); return setCount(index)} }>
                     <span>{data.num}번째 광고 요약 설명</span>
                   </a>
@@ -78,10 +81,10 @@ function ViewBox() {
         <ul>
           {listData.map((data,index) =>
             <ViewList 
-            key={data.num[index]} 
+            key={data.num} 
             action={count === index ? 'action' : null} 
             bgColor={data.color}
-            content={data.id} /> 
+            content={data.num} /> 
           )}
         </ul>
       </div>
