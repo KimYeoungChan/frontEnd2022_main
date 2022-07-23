@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function ViewList({action, content, bgColor}) {
   return (
     <li style={{backgroundColor: bgColor}}
