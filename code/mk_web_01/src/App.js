@@ -1,5 +1,3 @@
-import styled from 'styled-components';
-
 import Header from './Component/Common/Header'
 import Contents from './Component/Common/Contents'
 import Footer from './Component/Common/Footer'
@@ -11,7 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Contents></Contents>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }

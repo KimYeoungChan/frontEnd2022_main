@@ -4,7 +4,6 @@ import uuid from 'react-uuid';
 import './Header.scss'
 
 function Header() {
-
   const gnbList = [
     {id:uuid(), link: 'about', text: 'about'},
     {id:uuid(), link: 'work', text:'work'},
@@ -19,7 +18,7 @@ function Header() {
 
   return (
     <header id='headBox'>
-        <div className="contanier">
+        <div className="container">
             <h1><Link to="/">busin</Link></h1>
             <nav className="search">search</nav>
             <nav className="gnb">

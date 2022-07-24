@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Modern() {
+function Modern() {
   return (
-    <div>Modern</div>
+    <div>About</div>
   )
 }
+
+export default Modern
