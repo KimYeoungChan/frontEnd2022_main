@@ -1,0 +1,17 @@
+// CardApp.scs
+
+@use '../common/_variable' as *;
+@use '../common/_mixin';
+
+.card {
+    width: 250px; height: 400px;
+    border:$border-line_01;
+    background-color: $color-white;
+    
+    &.dark {
+        color:$color-white;
+        border-color: $color-light_gray_01;
+        background-color: $color-deep_gray;
+    }
+
+}
