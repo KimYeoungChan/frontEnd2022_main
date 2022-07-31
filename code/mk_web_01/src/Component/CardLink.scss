@@ -39,23 +39,26 @@
             align-items: center;
             flex-direction: column;
         }
-    }
 
-    dl {
-        width: 100%; height: auto;
-        text-align: center;
-        color: $color-white;
-
-        &::first-letter {
-            text-transform: uppercase;
+        dl {
+            width: 100%; height: auto;
+            text-align: center;
+            color: $color-white;
+    
+            &::first-letter {
+                text-transform: uppercase;
+            }
         }
+    
+        dt {
+            width: 100%; height: auto;
+            margin-bottom: 0.3rem;
+            font-weight: 900; font-size: 1.1rem;
+        }
+        dd {
+            width: 100%; height: auto;
     }
+}
 
-    dt {
-        width: 100%; height: auto;
-        margin-bottom: 0.3rem;
-        font-weight: 900; font-size: 1.1rem;
-    }
-    dd {
-        width: 100%; height: auto;
-    }
+    
+    

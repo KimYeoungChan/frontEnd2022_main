@@ -3,9 +3,7 @@
 .container {
     display: flex; justify-content: space-between;
     align-items: center;
-    width: 100%; max-width: 75rem; height: 3.75rem;
-    margin: auto;
-    background-color: #fff;
+    padding-top: 3.75rem;
 }
 
 h1 { order:0;}
