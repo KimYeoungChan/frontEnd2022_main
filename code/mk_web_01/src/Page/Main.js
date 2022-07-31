@@ -4,7 +4,7 @@ import MainView from './Main/MainView';
 import Amazing from './Main/Amazing';
 import Company from './Main/Company';
 import Pricing from './Main/Pricing';
-import Testimonals from './Main/Testimonals';
+import Tesimonals from './Main/Tesimonals';
 import Lastest from './Main/Lastest';
 import Experience from './Main/Experience';
 
@@ -17,8 +17,13 @@ return (
       <ContainerApp>
         <Pricing />
       </ContainerApp>
-      <Testimonals />
-      <Lastest />
+
+      <Tesimonals />
+
+      <ContainerApp>
+        <Lastest />
+      </ContainerApp>
+
       <Experience />
     </div>
   )
